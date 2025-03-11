@@ -57,5 +57,5 @@ Door dit contract te ondertekenen, stemmen alle teamleden ermee in zich te houde
 Handtekeningen:  
 Zaine  \- \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
 Hayden \- \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-Jelani \-  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+Jelani \- Jelani Duijsens 
 
