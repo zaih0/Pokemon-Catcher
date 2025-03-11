@@ -55,15 +55,9 @@ Teamleden & Rollen:
 Door dit contract te ondertekenen, stemmen alle teamleden ermee in zich te houden aan de bovenstaande regels en verwachtingen.
 
 Handtekeningen:  
-<<<<<<< HEAD
 Zaine  \- Zaine
 
 Hayden \- \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-  
-Jelani \-  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-=======
-Zaine  \- Zaine 
-Hayden \- \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+   
 Jelani \- Jelani Duijsens 
->>>>>>> c19467fcc19f7aeb067dfdb1d59aa851cc841062
 
