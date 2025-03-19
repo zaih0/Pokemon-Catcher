@@ -55,7 +55,9 @@ Teamleden & Rollen:
 Door dit contract te ondertekenen, stemmen alle teamleden ermee in zich te houden aan de bovenstaande regels en verwachtingen.
 
 Handtekeningen:  
-Zaine  \- Zaine 
-Hayden \- \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+Zaine  \- Zaine
+
+Hayden \- \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+   
 Jelani \- Jelani Duijsens 
 
