@@ -1,3 +1,4 @@
+
 <?php
 // Database connection
 $host = 'localhost';
@@ -142,11 +143,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $hpPercent = $maxHP > 0 ? ($currentHP / $maxHP) * 100 : 0;
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Pokemon Catcher</title>
     <style>
         .health-bar-container {
@@ -199,3 +202,5 @@ $hpPercent = $maxHP > 0 ? ($currentHP / $maxHP) * 100 : 0;
 <?php
 $conn->close();
 ?>
+
+
