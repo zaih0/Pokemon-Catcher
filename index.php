@@ -120,9 +120,8 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="css/index.css">
     <title>Pokemon Catcher</title>
-    <link rel="stylesheet" href="css/styles.css">
     <style>
         .health-bar-container {
             width: 300px;
@@ -169,6 +168,17 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
             <div class="health-bar"></div>
         </div>
         <p>HP: <?php echo $currentHP; ?> / <?php echo $maxHP; ?></p>
+
+        <div class="topframe">
+            <div id="top-speaker"></div>
+        </div>
+        <div class="middle-part">
+            <div id="stripe1"></div>
+            <div id="stripe2"></div>
+        </div>
+        <div class="bottomframe">
+
+        </div>
 
     <form method="post">
         <button type="submit" name="attack">Attack Pokémon</button>
