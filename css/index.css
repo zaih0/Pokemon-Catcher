@@ -1,33 +1,140 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
     background-color: #C774C9;
     margin: 0;
 }
 
 
+
+.pokemon-battle{
+    width: 475px;
+    height: 250px;
+}
 .topframe{
     width: 590px;
-    height: 852px;
+    height: 330px;
     position: relative;
-    top: -195px;
-    left: 0px;
+    top: -270px;
+    left: 430px;
     border-radius: 35px;
     background-color: white;
     z-index: -5;
 }
+#top-screen{
+    width: 475px;
+    height: 250px;
+    position: relative;
+    top: 20px;
+    left: 60px;
+    background-color: #D9D9D9; 
+}
 .bottomframe{
     width: 590px;
-    height: 852px;
+    height: 330px;
     position: relative;
-    top: -205px;
-    left: 0px;
+    top: -310px;
+    left: 430px;
     border-radius: 35px;
     background-color: white;
     z-index: -5;
+}
+#bottom-screen{
+    width: 350px;
+    height: 250px;
+    position: relative;
+    top: 50px;
+    left: 120px;
+    background-color: #D9D9D9; 
+}
+#joystick{
+    width: 79px;
+    height: 78px;
+    position: relative;
+    top: -160px;
+    left: 25px;
+    background-color: #F6F3F3;
+    border: solid;
+    border-width: 2px;
+    border-radius: 360px;
+    border-color: #E3E0E0;
+    z-index: -1;
+}
+#joystick-center{
+    width: 46px;
+    height: 45px;
+    position: relative;
+    top: -224px;
+    left: 42px;
+    background-color: #D9D9D9;
+    border: solid;
+    border-width: 2px;
+    border-radius: 360px;
+    border-color: #B3B1B1;
+}
+#button1{
+    width: 21px;
+    height: 20px;
+    position: relative;
+    top: -270px;
+    left: 515px;
+    background-color: #F7F4F4;
+    border: solid;
+    border-width: 2px;
+    border-radius: 360px;
+    border-color: #B5B3B3;
+}
+#button2{
+    width: 21px;
+    height: 20px;
+    position: relative;
+    top: -270px;
+    left: 490px;
+    background-color: #F7F4F4;
+    border: solid;
+    border-width: 2px;
+    border-radius: 360px;
+    border-color: #B5B3B3;
+}
+#button3{
+    width: 21px;
+    height: 20px;
+    position: relative;
+    top: -292px;
+    left: 540px;
+    background-color: #F7F4F4;
+    border: solid;
+    border-width: 2px;
+    border-radius: 360px;
+    border-color: #B5B3B3;
+}
+#button4{
+    width: 21px;
+    height: 20px;
+    position: relative;
+    top: -290px;
+    left: 515px;
+    background-color: #F7F4F4;
+    border: solid;
+    border-width: 2px;
+    border-radius: 360px;
+    border-color: #B5B3B3;
+}
+#power-button{
+    width: 16px;
+    height: 16px;
+    background-color: #FFFEFE;
+    border: solid;
+    border-width: 2px;
+    border-radius: 360px;
+    border-color: #C3C0C0;
+    position: relative;
+    top: -200px;
+    left: 490px;
+}
+#power{
+    position:relative;
+    top: -220px;
+    left: 515px;
+    color: #C3C3C3;
 }
 #top-speaker{
     width: 21px;
@@ -49,8 +156,8 @@ body {
     border-width: 3px;
     border-color: #EFEEEE;
     position: relative;
-    top: -200px;
-    left: 00px;
+    top: -290px;
+    left: 454px;
     border-radius: 25px;
 }
 #stripe1{
@@ -71,7 +178,49 @@ body {
     left: 450px;
     z-index: 9;
 }
-
+#bottom-rectangle{
+    width: 423px;
+    height: 20px;
+    background-color: #ffffff;
+    border: solid;
+    border-width: 2px;
+    border-color: #D0CECE;
+    position: relative;
+    top: -203px;
+    left: 80px;
+    border-radius: 25px;
+}
+#bottom-stripe{
+    width: 5px;
+    height: 23px;
+    background-color: #D0CECE;
+    position: relative;
+    top: -227px;
+    left: 175px;
+    z-index: 9;
+}
+#bottom-stripe2{
+    width: 5px;
+    height: 23px;
+    background-color: #D0CECE;
+    position: relative;
+    top: -250px;
+    left: 400px;
+    z-index: 9;
+}
+.health-bar-container{
+    position: relative;
+    top: -140px;
+    left: 580px;
+    z-index: 2;
+}
+.pokemon-display{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 50px;
+    left: 710px;
+}
 
 .home-button, .start-button, .select-button {
     width: 30px;

@@ -159,7 +159,7 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
 
 <?php if ($currentPokemon): ?>
     <h1><?php echo htmlspecialchars($currentPokemon['name']); ?></h1>
-    <img src="pokemon-gifs/<?php echo htmlspecialchars($currentPokemon['name']); ?>.gif"
+    <img class="pokemon-display" src="pokemon-gifs/<?php echo htmlspecialchars($currentPokemon['name']); ?>.gif"
          alt="<?php echo htmlspecialchars($currentPokemon['name']); ?>">
 
     <p><?php echo $currentPokemon['legendary'] ? 'This is a Legendary Pokémon!' : 'This is a normal Pokémon.'; ?></p>
@@ -171,14 +171,38 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
 
         <div class="topframe">
             <div id="top-speaker"></div>
+            <div id="top-screen">
+                <img class="pokemon-battle" src=assets/pokemon-battle.jpeg alt="pokemon-battle">
+            </div>
+            <div class="leftspeaker">
+                <div id="left-speaker1"></div>
+                <div id="left-speaker2"></div>
+                <div id="left-speaker3"></div>
+            </div>
         </div>
         <div class="middle-part">
             <div id="stripe1"></div>
             <div id="stripe2"></div>
         </div>
         <div class="bottomframe">
-
+            <div id="bottom-screen"></div>
+                <div id="joystick"></div>
+                <div id="joystick-center"></div>
+                <div id="button1"></div>
+                <div id="button2"></div>
+                <div id="button3"></div>
+                <div id="button4"></div>
+                
+                <div id="power-button"></div>
+                <div id="power">power</div>
+                <div class="bottom-part">
+                    <div id="bottom-rectangle"></div>
+                    <div id="bottom-stripe"></div>
+                    <div id="bottom-stripe2"></div>
+                </div>
+        
         </div>
+       
 
     <form method="post">
         <button type="submit" name="attack">Attack Pokémon</button>
