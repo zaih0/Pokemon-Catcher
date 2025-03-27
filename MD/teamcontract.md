@@ -1,4 +1,4 @@
-# Teamcontract voor Online Menu Project
+# Teamcontract voor Pokemon Catcher Project
 
 # 1\. Teaminformatie
 
