@@ -162,6 +162,18 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
     <img class="pokemon-display" src="pokemon-gifs/<?php echo htmlspecialchars($currentPokemon['name']); ?>.gif"
          alt="<?php echo htmlspecialchars($currentPokemon['name']); ?>">
 
+    <?php
+        $sql = "SELECT * FROM pokemon WHERE name = 'greninja-active'";
+        $result = $conn->query($sql); 
+        $DisplayPokemon = $result;
+    ?>
+<?php if ($DisplayPokemon->num_rows > 0): ?>
+    <?php while ($row = $DisplayPokemon->fetch_assoc()): ?>
+        <img class="pokemon-display-bottom" src="pokemon-back-gifs/<?php echo htmlspecialchars($row['name']); ?> (1).gif" 
+        alt="<?php echo htmlspecialchars($row['name']); ?>">
+    <?php endwhile; ?>
+<?php endif; ?>
+
     <p><?php echo $currentPokemon['legendary'] ? 'This is a Legendary Pokémon!' : 'This is a normal Pokémon.'; ?></p>
 
         <div class="health-bar-container">
@@ -203,10 +215,66 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
        
 
     <form method="post">
-        <button type="submit" name="attack">Attack Pokémon</button>
+        <button type="submit" name="attack" class="attack">Attack Pokémon</button>
         <button type="submit" name="catch">Catch Pokémon</button>
         <button type="submit" name="next">Next Pokémon</button>
     </form>
+
+    <button type="button" id="pokedex-button">View Pokedex</button>
+
+    <div id="pokedex-menu" style="display: none; position: fixed; top: 10%; right: 10px; width: 300px; height: 80%; background-color: lightblue; border: 2px solid #333; border-radius: 10px; overflow-y: auto; z-index: 1000; padding: 10px;">
+        <h2 style="text-align: center; font-family: Arial, sans-serif;">Pokedex</h2>
+        <button type="button" id="close-pokedex" style="position: absolute; top: 5px; right: 10px; background-color: red; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">X</button>
+        <div id="pokedex-content" style="font-family: Arial, sans-serif;">
+            <?php
+            $sql = "SELECT * FROM pokedex";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0): ?>
+                <ul style="list-style: none; padding: 0;">
+                    <?php while ($row = $result->fetch_assoc()): ?>
+                        <li style="margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+                            <img src="pokemon-gifs/<?php echo htmlspecialchars($row['name']); ?>.gif" alt="<?php echo htmlspecialchars($row['name']); ?>" style="height: 50px; vertical-align: middle;">
+                            <strong><?php echo htmlspecialchars($row['name']); ?></strong><br>
+                            HP: <?php echo $row['hp']; ?> | Attack: <?php echo $row['attack']; ?> | Defense: <?php echo $row['defense']; ?><br>
+                            <?php echo $row['legendary'] ? '<span style="color: gold;">Legendary Pokémon</span>' : 'Normal Pokémon'; ?>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+        </div>
+    </div>
+            <?php else: ?>
+                <p>No Pokémon in your Pokedex yet.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('pokedex-button').addEventListener('click', function () {
+            document.getElementById('pokedex-menu').style.display = 'block';
+        });
+
+        document.getElementById('close-pokedex').addEventListener('click', function () {
+            document.getElementById('pokedex-menu').style.display = 'none';
+        });
+
+        // Function to dynamically update the Pokedex content
+        function updatePokedex() {
+            fetch('fetch_pokedex.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('pokedex-content').innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching Pokedex:', error));
+        }
+
+        // Call updatePokedex after catching a Pokémon
+        document.querySelector('form').addEventListener('submit', function (event) {
+            if (event.target.name === 'catch') {
+                setTimeout(updatePokedex, 500); // Delay to ensure database update
+            }
+        });
+    </script>
 
 <?php else: ?>
     <p>No Pokémon available.</p>
