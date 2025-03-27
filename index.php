@@ -174,11 +174,8 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
             <div id="top-screen">
                 <img class="pokemon-battle" src=assets/pokemon-battle.jpeg alt="pokemon-battle">
             </div>
-            <div class="leftspeaker">
-                <div id="left-speaker1"></div>
-                <div id="left-speaker2"></div>
-                <div id="left-speaker3"></div>
-            </div>
+               <img class="speaker1" src="assets/speaker-3ds.png" alt="speaker1">
+                <img class="speaker2" src="assets/speaker-3ds.png" alt="speaker2">
         </div>
         <div class="middle-part">
             <div id="stripe1"></div>
@@ -192,6 +189,7 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
                 <div id="button2"></div>
                 <div id="button3"></div>
                 <div id="button4"></div>
+                <img id="big-button"src="assets/button-3ds.png" alt="">
                 
                 <div id="power-button"></div>
                 <div id="power">power</div>

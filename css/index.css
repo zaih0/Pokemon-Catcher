@@ -27,6 +27,22 @@ body {
     left: 60px;
     background-color: #D9D9D9; 
 }
+.speaker1{
+    width: 24px;
+    height: 22px;
+    position: relative;
+    top: -120px;
+    left: 15px;
+    border-radius: 360px;   
+}
+.speaker2{
+    width: 24px;
+    height: 22px;
+    position: relative;
+    top: -120px;
+    left: 520px;
+    border-radius: 360px;   
+}
 .bottomframe{
     width: 590px;
     height: 330px;
@@ -118,6 +134,14 @@ body {
     border-radius: 360px;
     border-color: #B5B3B3;
 }
+#big-button{
+    width: 70px;
+    height: 68px;
+    position: relative;
+    top: -290px;
+    left: 32px;
+    background-color: #F7F4F4;
+}
 #power-button{
     width: 16px;
     height: 16px;
@@ -127,12 +151,12 @@ body {
     border-radius: 360px;
     border-color: #C3C0C0;
     position: relative;
-    top: -200px;
+    top: -300px;
     left: 490px;
 }
 #power{
     position:relative;
-    top: -220px;
+    top: -320px;
     left: 515px;
     color: #C3C3C3;
 }
@@ -186,7 +210,7 @@ body {
     border-width: 2px;
     border-color: #D0CECE;
     position: relative;
-    top: -203px;
+    top: -275px;
     left: 80px;
     border-radius: 25px;
 }
@@ -195,7 +219,7 @@ body {
     height: 23px;
     background-color: #D0CECE;
     position: relative;
-    top: -227px;
+    top: -299px;
     left: 175px;
     z-index: 9;
 }
@@ -204,7 +228,7 @@ body {
     height: 23px;
     background-color: #D0CECE;
     position: relative;
-    top: -250px;
+    top: -322px;
     left: 400px;
     z-index: 9;
 }
