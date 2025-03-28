@@ -4,10 +4,7 @@ body {
     font-family: Arial, sans-serif;overflow: hidden;
     background-image: url(../assets/BG.png);
     z-index: -12;
-
 }
-
-
 
 .pokemon-battle{
     width: 475px;
@@ -343,7 +340,7 @@ body {
 }
 
 .pokemon-rarity{
-    color: #d07842;
+    color: #FFD700;
     position: relative;
     left: 700px;
     top: 265px;
@@ -357,3 +354,23 @@ body {
     bottom: 177px;
     z-index: 100;
 }
+
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
