@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $currentPokemon) {
         if ($currentHP <= 0) {
             $currentHP = 0;
             $_SESSION['current_hp'] = $currentHP;
-            $message = htmlspecialchars($currentPokemon['name']) . " fainted!";
+           
 
             // Clear current Pokémon and reload for next one
             unset($_SESSION['current_pokemon']);
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $currentPokemon) {
             exit;
         } else {
             $_SESSION['current_hp'] = $currentHP;
-            $message = "You attacked " . htmlspecialchars($currentPokemon['name']) . " for {$damage} damage!";
+            
         }
     }
 
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $currentPokemon) {
             $stmt->execute();
             $stmt->close();
 
-            $message = "You caught " . htmlspecialchars($currentPokemon['name']) . "!";
+           
 
             // Clear current Pokémon and reload for next one
             unset($_SESSION['current_pokemon']);
@@ -94,13 +94,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $currentPokemon) {
             header("Location: " . $_SERVER['PHP_SELF']);
             exit;
         } else {
-            $message = htmlspecialchars($currentPokemon['name']) . " escaped!";
+            
         }
     }
 
     // NEXT
     if (isset($_POST['next'])) {
-        $message = "You skipped " . htmlspecialchars($currentPokemon['name']) . ".";
+        
 
         // Clear current Pokémon and reload for next one
         unset($_SESSION['current_pokemon']);
@@ -125,7 +125,7 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
     <style>
         .health-bar-container {
             width: 300px;
-            background-color: #ddd;
+            background-color: #5f5f5f;
             border: 1px solid #333;
             border-radius: 5px;
             margin-bottom: 10px;
@@ -158,7 +158,7 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
 <?php endif; ?>
 
 <?php if ($currentPokemon): ?>
-    <h1><?php echo htmlspecialchars($currentPokemon['name']); ?></h1>
+    <h1 class="pokemon-name"><?php echo htmlspecialchars($currentPokemon['name']); ?></h1>
     <img class="pokemon-display" src="pokemon-gifs/<?php echo htmlspecialchars($currentPokemon['name']); ?>.gif"
          alt="<?php echo htmlspecialchars($currentPokemon['name']); ?>">
 
@@ -174,12 +174,12 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
     <?php endwhile; ?>
 <?php endif; ?>
 
-    <p><?php echo $currentPokemon['legendary'] ? 'This is a Legendary Pokémon!' : 'This is a normal Pokémon.'; ?></p>
+    <p class="pokemon-rarity"><?php echo $currentPokemon['legendary'] ? '(Legendary!)' : '(Normal)'; ?></p>
 
         <div class="health-bar-container">
             <div class="health-bar"></div>
         </div>
-        <p>HP: <?php echo $currentHP; ?> / <?php echo $maxHP; ?></p>
+        <p class="bitchesnshit"><strong>HP: <?php echo $currentHP; ?> / <?php echo $maxHP; ?></strong></p>
 
         <div class="topframe">
             <div id="top-speaker"></div>
@@ -194,7 +194,7 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
             <div id="stripe2"></div>
         </div>
         <div class="bottomframe">
-            <div id="bottom-screen"></div>
+            <div id="bottom-screen"><img class="cooler-background" src="assets/boo.png" alt="boo"></div>
                 <div id="joystick"></div>
                 <div id="joystick-center"></div>
                 <div id="button1"></div>
@@ -215,12 +215,12 @@ $hpPercent = ($maxHP > 0) ? ($currentHP / $maxHP) * 100 : 0;
        
 
     <form method="post">
-        <button type="submit" name="attack" class="attack">Attack Pokémon</button>
-        <button type="submit" name="catch">Catch Pokémon</button>
-        <button type="submit" name="next">Next Pokémon</button>
+        <button type="submit" name="attack" class="attack"><img class="FIGHT"src="assets/FIGHT-button.png" alt="Fight button"></button>
+        <button type="submit" name="catch" class="grab"><img class="CATCH" src="assets/CATCH-button.png" alt="Catch button"></button>
+        <button type="submit" name="next" class="flee"><img class="RUN" src="assets/RUN-button.png" alt="Run button"></button>
     </form>
 
-    <button type="button" id="pokedex-button">View Pokedex</button>
+    <button type="button" id="pokedex-button" class="pocket"><img class="BAG" src="assets/BAG-button.png" alt="BAG button"></button>
 
     <div id="pokedex-menu" style="display: none; position: fixed; top: 10%; right: 10px; width: 300px; height: 80%; background-color: lightblue; border: 2px solid #333; border-radius: 10px; overflow-y: auto; z-index: 1000; padding: 10px;">
         <h2 style="text-align: center; font-family: Arial, sans-serif;">Pokedex</h2>
